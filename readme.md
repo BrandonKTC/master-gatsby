@@ -2,53 +2,54 @@
 
 # Master Gatsby
 
-- [] Module 1 :
+[] Module 1 :
+
 - - Getting Setup
 
-- [] Module 2 :
+[] Module 2 :
 
 - - Gatsby Basics
 
-- [] Module 3 :
+[] Module 3 :
 
 - - CSS in Gatsby
 
-- [] Module 4 :
+[] Module 4 :
 
 - - Headless CMS
 
-- [] Module 5 :
+[] Module 5 :
 
 - - Headless CMS
 
-- [] Module 6 :
+[] Module 6 :
 
 - - Puttin' in work
 
-- [] Module 7 :
+[] Module 7 :
 
 - - Making Gatsby Dynamic
 
-- [] Module 8 :
+[] Module 8 :
 
 - - Pages & Filtering
 
-- [] Module 9 :
+[] Module 9 :
 
 - - Custom Pages + SEO
 
-- [] Module 10 :
+[] Module 10 :
 
 - - Order Form, Custom Hooks and state management
 
-- [] Module 11 :
+[] Module 11 :
 
 - - Serverless Functions
 
-- [] Module 12 :
+[] Module 12 :
 
 - - Client Side Data
 
-- [] Module 13 :
+[] Module 13 :
 
 - - Building, Depolyment and Responsive Design
