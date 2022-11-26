@@ -18,11 +18,11 @@
 
 - Headless CMS
 
-[] Module 5 :
+- [x] Module 5 :
 
 - Getting Data into Gatsby with GraphQL
 
-[] Module 6 :
+- [x] Module 6 :
 
 - Puttin' in work
 
