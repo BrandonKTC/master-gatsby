@@ -2,11 +2,11 @@
 
 # Master Gatsby
 
-[] Module 1 :
+[x] Module 1 :
 
 - Getting Setup
 
-[] Module 2 :
+[x] Module 2 :
 
 - Gatsby Basics
 
