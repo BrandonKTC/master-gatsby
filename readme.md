@@ -4,52 +4,52 @@
 
 [] Module 1 :
 
-- - Getting Setup
+- Getting Setup
 
 [] Module 2 :
 
-- - Gatsby Basics
+- Gatsby Basics
 
 [] Module 3 :
 
-- - CSS in Gatsby
+- CSS in Gatsby
 
 [] Module 4 :
 
-- - Headless CMS
+- Headless CMS
 
 [] Module 5 :
 
-- - Headless CMS
+- Headless CMS
 
 [] Module 6 :
 
-- - Puttin' in work
+- Puttin' in work
 
 [] Module 7 :
 
-- - Making Gatsby Dynamic
+- Making Gatsby Dynamic
 
 [] Module 8 :
 
-- - Pages & Filtering
+- Pages & Filtering
 
 [] Module 9 :
 
-- - Custom Pages + SEO
+- Custom Pages + SEO
 
 [] Module 10 :
 
-- - Order Form, Custom Hooks and state management
+- Order Form, Custom Hooks and state management
 
 [] Module 11 :
 
-- - Serverless Functions
+- Serverless Functions
 
 [] Module 12 :
 
-- - Client Side Data
+- Client Side Data
 
 [] Module 13 :
 
-- - Building, Depolyment and Responsive Design
+- Building, Depolyment and Responsive Design
