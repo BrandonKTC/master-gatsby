@@ -18,7 +18,7 @@
 
 - Headless CMS
 
-[] Module 5 :
+- [x] Module 5 :
 
 - Headless CMS
 
