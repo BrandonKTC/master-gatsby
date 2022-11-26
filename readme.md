@@ -10,7 +10,7 @@
 
 - Gatsby Basics
 
-[] Module 3 :
+- [x] Module 3 :
 
 - CSS in Gatsby
 
