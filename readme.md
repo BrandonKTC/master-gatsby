@@ -20,7 +20,7 @@
 
 [] Module 5 :
 
-- Headless CMS
+- Getting Data into Gatsby with GraphQL
 
 [] Module 6 :
 
