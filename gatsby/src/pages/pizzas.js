@@ -1,11 +1,13 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import PizzaList from '../components/PizzaList';
+import ToppingFilter from '../components/ToppingFilter';
 
 const PizzasPage = ({ data }) => {
   const pizzas = data.pizzas.nodes;
   return (
     <>
+      <ToppingFilter />
       <PizzaList pizzas={pizzas} />
     </>
   );
@@ -28,6 +30,9 @@ export const query = graphql`
         }
         image {
           asset {
+            fixed(width: 200, height: 200) {
+              ...GatsbySanityImageFixed
+            }
             fluid(maxWidth: 400) {
               ...GatsbySanityImageFluid
             }
