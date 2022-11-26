@@ -14,7 +14,7 @@
 
 - CSS in Gatsby
 
-[] Module 4 :
+- [x] Module 4 :
 
 - Headless CMS
 
