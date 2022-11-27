@@ -26,7 +26,7 @@
 
 - Puttin' in work
 
-[] Module 7 :
+- [x] Module 7 :
 
 - Making Gatsby Dynamic
 
