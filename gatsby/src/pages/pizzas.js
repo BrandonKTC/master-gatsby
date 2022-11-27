@@ -3,11 +3,11 @@ import React from 'react';
 import PizzaList from '../components/PizzaList';
 import ToppingFilter from '../components/ToppingFilter';
 
-const PizzasPage = ({ data }) => {
+const PizzasPage = ({ data, pageContext }) => {
   const pizzas = data.pizzas.nodes;
   return (
     <>
-      <ToppingFilter />
+      <ToppingFilter activeTopping={pageContext.topping} />
       <PizzaList pizzas={pizzas} />
     </>
   );
@@ -16,8 +16,10 @@ const PizzasPage = ({ data }) => {
 export default PizzasPage;
 
 export const query = graphql`
-  query PizzaQuery {
-    pizzas: allSanityPizza {
+  query PizzaQuery($topping: [String]) {
+    pizzas: allSanityPizza(
+      filter: { toppings: { elemMatch: { name: { in: $topping } } } }
+    ) {
       nodes {
         name
         id

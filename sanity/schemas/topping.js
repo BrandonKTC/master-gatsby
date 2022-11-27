@@ -25,7 +25,7 @@ export default {
   ],
   preview: {
     select: {
-      name: 'topping',
+      name: 'name',
       vegetarian: 'vegetarian',
     },
     prepare: ({ name, vegetarian }) => ({
