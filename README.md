@@ -30,7 +30,7 @@
 
 - Making Gatsby Dynamic
 
-[] Module 8 :
+- [x] Module 8 :
 
 - Pages & Filtering
 
