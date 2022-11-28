@@ -34,7 +34,7 @@
 
 - Pages & Filtering
 
-[] Module 9 :
+- [x] Module 9 :
 
 - Custom Pages + SEO
 
