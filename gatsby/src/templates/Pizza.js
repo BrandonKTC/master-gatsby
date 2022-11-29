@@ -12,7 +12,7 @@ const PizzaGrid = styled.div`
 
 const SinglePizzaPage = ({ data: { pizza } }) => (
   <>
-    <SEO title={pizza.name} image={pizza.image.asset.fluid.src} />
+    <SEO title={pizza.name} image={pizza.image?.asset?.fluid?.src} />
     <PizzaGrid>
       <Img fluid={pizza.image.asset.fluid} />
       <div>

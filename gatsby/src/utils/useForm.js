@@ -1,0 +1,15 @@
+import { useState } from 'react';
+
+export default function useForm(defaults) {
+  const [values, setvalues] = useState(defaults);
+
+  function updateValue(e) {
+    let { value } = e.target;
+    if (e.target.type === 'number') {
+      value = parseInt(value);
+    }
+    setvalues({ ...values, [e.target.name]: value });
+  }
+
+  return { values, updateValue };
+}
