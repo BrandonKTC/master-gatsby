@@ -42,7 +42,7 @@
 
 - Order Form, Custom Hooks and state management
 
-[] Module 11 :
+- [x] Module 11 :
 
 - Serverless Functions
 
