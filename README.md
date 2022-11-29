@@ -46,7 +46,7 @@
 
 - Serverless Functions
 
-[] Module 12 :
+- [x] Module 12 :
 
 - Client Side Data
 
