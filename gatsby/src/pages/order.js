@@ -18,17 +18,28 @@ const OrderPage = ({ data }) => {
   const { values, updateValue } = useForm({
     name: '',
     email: '',
+    mapleSyrup: '',
   });
 
-  const { order, addToOrder, removeFromOrder } = usePizza({
+  const {
+    order,
+    addToOrder,
+    removeFromOrder,
+    error,
+    loading,
+    submitOrder,
+    message,
+  } = usePizza({
     pizzas,
-    input: values,
+    values,
   });
+
+  if (message) return <p>{message}</p>;
   return (
     <>
       <SEO title="Order a Pizza!" />
-      <OrderStyles>
-        <fieldset>
+      <OrderStyles onSubmit={submitOrder}>
+        <fieldset disabled={loading}>
           <legend>Your Info</legend>
           <label htmlFor="name">Your Info</label>
           <input
@@ -45,8 +56,15 @@ const OrderPage = ({ data }) => {
             onChange={updateValue}
             placeholder="james@gmail.com"
           />
+          <input
+            type="mapleSyrup"
+            name="mapleSyrup"
+            value={values.mapleSyrup}
+            onChange={updateValue}
+            className="mapleSyrup"
+          />
         </fieldset>
-        <fieldset className="menu">
+        <fieldset disabled={loading} className="menu">
           <legend>Menu</legend>
           {pizzas.map((pizza) => (
             <MenuItemStyles key={pizza.id}>
@@ -73,7 +91,7 @@ const OrderPage = ({ data }) => {
             </MenuItemStyles>
           ))}
         </fieldset>
-        <fieldset className="order">
+        <fieldset disabled={loading} className="order">
           <legend>Order</legend>
           <PizzaOrder
             order={order}
@@ -81,11 +99,14 @@ const OrderPage = ({ data }) => {
             pizzas={pizzas}
           />
         </fieldset>
-        <fieldset>
+        <fieldset disabled={loading}>
           <h3>
             Your Total is {formatMoney(calculateOrderTotal(order, pizzas))}
           </h3>
-          <button type="submit">Order Ahead</button>
+          <div>{error && <p>Error: {error}</p>}</div>
+          <button type="submit" disabled={loading}>
+            {loading ? 'Placing Order...' : 'Order Ahead'}
+          </button>
         </fieldset>
       </OrderStyles>
     </>

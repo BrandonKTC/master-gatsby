@@ -54,8 +54,8 @@ const SlicemastersPage = ({ data, pageContext }) => {
         base="/slicemasters"
       />
       <SlicemasterGrid>
-        {slicemasters.map((person) => (
-          <SlicemasterStyles>
+        {slicemasters.map((person, i) => (
+          <SlicemasterStyles key={i}>
             <Link to={`/slicemaster/${person.slug.current}`}>
               <h2>
                 <span className="mark">{person.name}</span>

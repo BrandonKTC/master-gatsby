@@ -6,12 +6,12 @@ import formatMoney from '../utils/formatMoney';
 
 const PizzaOrder = ({ order, pizzas, removeFromOrder }) => (
   <>
-    {order.map((singleOrder, index) => {
+    {order.map((singleOrder, i) => {
       const pizza = pizzas.find(
         (singlePizza) => singlePizza.id === singleOrder.id
       );
       return (
-        <MenuItemStyles key={singleOrder.id}>
+        <MenuItemStyles key={i}>
           <Img fluid={pizza.image.asset.fluid} />
           <h2>{pizza.name}</h2>
           <p>
