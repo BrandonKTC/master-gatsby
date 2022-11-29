@@ -38,7 +38,7 @@
 
 - Custom Pages + SEO
 
-[] Module 10 :
+- [x] Module 10 :
 
 - Order Form, Custom Hooks and state management
 
