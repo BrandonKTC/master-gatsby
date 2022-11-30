@@ -15,6 +15,8 @@ const ToppingsStyles = styled.div`
     background: var(--grey);
     align-items: center;
     border-radius: 2px;
+    text-decoration: none;
+    font-size: clamp(1.5rem, 1.4vw, 2.5rem);
     .count {
       background: #fff;
       padding: 2px 5px;
@@ -51,7 +53,7 @@ function countPizzasInToppings(pizzas) {
   return sortedToppings;
 }
 
-const ToppingFilter = ({ activeTopping }) => {
+const ToppingFilter = () => {
   const { pizzas } = useStaticQuery(graphql`
     query {
       pizzas: allSanityPizza {
