@@ -17,7 +17,7 @@ export const MenuItemStyles = styled.div`
     margin: 0;
   }
   button {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   button + button {
     margin-left: 1rem;
@@ -31,6 +31,11 @@ export const MenuItemStyles = styled.div`
     right: 0;
     box-shadow: none;
     line-height: 1rem;
+  }
+  @media (max-width: 700px) {
+    button {
+      font-size: 1rem;
+    }
   }
 `;
 
