@@ -42,7 +42,7 @@ const HomePage = () => {
   const { Slicesmasters, hotSlices } = useLatestsData();
   return (
     <>
-      <SEO title="il etait une pizza" />
+      <SEO title="once upon a pizza" />
       <div className="center">
         <h1>The Best Pizza Downtown!</h1>
         <p>Open 18h30 to 23h Every Single Day</p>
