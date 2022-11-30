@@ -41,7 +41,7 @@ const OrderPage = ({ data }) => {
       <OrderStyles onSubmit={submitOrder}>
         <fieldset disabled={loading}>
           <legend>Your Info</legend>
-          <label htmlFor="name">Your Info</label>
+          <label htmlFor="name">Name</label>
           <input
             name="name"
             value={values.name}
