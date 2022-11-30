@@ -52,4 +52,4 @@
 
 [] Module 13 :
 
-- Building, Depolyment and Responsive Design
+- Building, Deployment and Responsive Design
