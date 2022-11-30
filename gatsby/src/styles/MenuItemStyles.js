@@ -17,7 +17,7 @@ export const MenuItemStyles = styled.div`
     margin: 0;
   }
   button {
-    font-size: 1.2rem;
+    font-size: 1.42rem;
   }
   button + button {
     margin-left: 1rem;

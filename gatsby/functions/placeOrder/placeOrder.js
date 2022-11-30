@@ -1,28 +1,29 @@
 const nodemailer = require('nodemailer');
 
-async function generateOrderEmail({ order, total }) {
+function generateOrderEmail({ order, total }) {
   return `<div>
-    <h2>Your recent Order for ${total}</h2>
+    <h2>Your Recent Order for ${total}</h2>
     <p>Please start walking over, we will have your order ready in the next 20 mins.</p>
     <ul>
-    ${order
-      .map(
-        (item) => `<li>
-    <img src="${item.thumbnail}" alt="${item.name}" />
-    ${item.size} ${item.name} - ${item.price}
-    </li>`
-      )
-      .join('')}
+      ${order
+        .map(
+          (item) => `<li>
+        <img src="${item.thumbnail}" alt="${item.name}"/>
+        ${item.size} ${item.name} - ${item.price}
+      </li>`
+        )
+        .join('')}
     </ul>
-    <p>Your total is <strong>${total}</strong> € due at pickup</p>
+    <p>Your total is <strong>$${total}</strong> due at pickup</p>
     <style>
         ul {
-            list-style: none;
+          list-style: none;
         }
     </style>
-    </div>`;
+  </div>`;
 }
 
+// create a transport for nodemailer
 const transporter = nodemailer.createTransport({
   host: process.env.MAIL_HOST,
   port: 587,
@@ -32,7 +33,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-function wait(ms) {
+function wait(ms = 0) {
   return new Promise((resolve, reject) => {
     setTimeout(resolve, ms);
   });
@@ -40,17 +41,17 @@ function wait(ms) {
 
 exports.handler = async (event, context) => {
   const body = JSON.parse(event.body);
-
+  // Check if they have filled out the honeypot
   if (body.mapleSyrup) {
     return {
       statusCode: 400,
-      body: JSON.stringify({
-        message: 'Boop beep bop zzzzstt good bye',
-      }),
+      body: JSON.stringify({ message: 'Boop beep bop zzzzstt good bye' }),
     };
   }
-  const requireFields = ['email', 'name', 'order'];
-  for (const field of requireFields) {
+  // Validate the data coming in is correct
+  const requiredFields = ['email', 'name', 'order'];
+
+  for (const field of requiredFields) {
     console.log(`Checking that ${field} is good`);
     if (!body[field]) {
       return {
@@ -61,20 +62,26 @@ exports.handler = async (event, context) => {
       };
     }
   }
+
+  // make sure they actually have items in that order
   if (!body.order.length) {
     return {
       statusCode: 400,
-      body: JSON.stringify({ message: 'Why would you order nothing ?!' }),
+      body: JSON.stringify({
+        message: `Why would you order nothing?!`,
+      }),
     };
   }
+
+  // send the email
   const info = await transporter.sendMail({
     from: "Slick's Slices <slick@example.com>",
-    to: `${body.name} <${body.email}>,orders@example.com`,
+    to: `${body.name} <${body.email}>, orders@example.com`,
     subject: 'New order!',
     html: generateOrderEmail({ order: body.order, total: body.total }),
   });
   return {
     statusCode: 200,
-    body: JSON.stringify({ message: 'success' }),
+    body: JSON.stringify({ message: 'Success' }),
   };
 };
