@@ -50,6 +50,6 @@
 
 - Client Side Data
 
-[] Module 13 :
+- [x] Module 13 :
 
 - Building, Deployment and Responsive Design

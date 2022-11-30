@@ -52,4 +52,9 @@ export const ItemStyles = styled.div`
     background-size: 500px;
     animation: shine 1s infinite linear;
   }
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.02);
+  }
 `;
