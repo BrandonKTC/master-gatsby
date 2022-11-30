@@ -5,7 +5,7 @@ dotenv.config({ path: '.env' });
 export default {
   pathPrefix: '/pizza',
   siteMetadata: {
-    title: `Slicks Slices`,
+    title: `Ouapz Slices`,
     siteUrl: 'https://gatsby.pizza',
     description: 'The best pizza place in Hamilton!',
     twitter: '@slicksSlices',
