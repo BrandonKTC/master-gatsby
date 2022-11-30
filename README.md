@@ -52,4 +52,4 @@
 
 - [x] Module 13 :
 
-- Building, Deployment and Responsive Design
+- Building, Deployment and Responsive Design (Mobile, tablet and computer)
